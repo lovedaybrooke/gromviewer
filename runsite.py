@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
 
@@ -64,19 +64,23 @@ def test():
             architecture_categories=categories.architecture_categories,
             style_categories=categories.style_categories)
 
-@app.route('/<category>')
+@app.route('/<category>', methods=['GET', 'POST'])
 def category(category):
     category_slug, category_name = legit_category(category)
     if category_slug:
-        print ("\n\n\n")
-        print(category_slug)
-        print ("\n\n\n")
-        images = ImageCategorisations.query.filter(ImageCategorisations.tag == category_slug).filter(ImageCategorisations.strength > 0.2).order_by(ImageCategorisations.strength.desc()).all()
+        confidence = request.args.get('confidence', default=50)
+        images = ImageCategorisations.query.filter(
+            ImageCategorisations.tag == category_slug).filter(
+            ImageCategorisations.strength > float(confidence)/100).order_by(
+            ImageCategorisations.strength.desc()).all()
         urls = [image.url for image in images]
+
         return render_template('category.html',
             urls=urls,
+            confidence=confidence,
             count=len(urls),
             category_name=category_name,
+            category_slug=category_slug,
             ingredient_categories=categories.ingredient_categories,
             food_categories=categories.food_categories,
             people_categories=categories.people_categories,

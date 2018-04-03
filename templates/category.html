@@ -19,7 +19,7 @@
  	<div class="photo-title">
  		{% if category_name %}
 			<h2>{{ category_name|title }}</h2>
-			<h3>{{ count }} photos</h3>
+			<h3>{{ count }} photos {% if confidence %} at {{ confidence }}% confidence{% endif %}</h3>
 		{% endif %}
 	</div>
  	<div id="photos">
@@ -61,10 +61,28 @@
 			{% for url_name, display_name in style_categories.items() %}
 				<h3 class='category'><a href="/{{ url_name }}">{{ display_name }}</a></h3>
 			{% endfor %}
+
+			<div class="slidecontainer">
+				<form action="/{{category_slug}}">
+				 	<label for="confidenceScale">Change confidence level: <span id="confidenceFigure"></span>%</label>
+				 	<input type="range" min="1" max="100" value="{{confidence}}" class="slider" id="confidenceScale" name="confidence">
+				 	<input type="submit" value="Set new confidence level">
+				 </form>
+			</div>
 		</div>
   
 
 
 </div>
 </body>
+<script type="text/javascript">
+	var slider = document.getElementById("confidenceScale");
+	var output = document.getElementById("confidenceFigure");
+	output.innerHTML = slider.value; // Display the default slider value
+
+	// Update the current slider value (each time you drag the slider handle)
+	slider.oninput = function() {
+	    output.innerHTML = this.value;
+	}
+</script>
 </html>
