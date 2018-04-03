@@ -1,58 +1,63 @@
-subject_categories = {
+ingredient_categories = {
+    'vegetables': 'Vegetables',
+    'mushrooms': 'Mushrooms',
+    'lettuce': 'Lettuce',
+    'tomatoes': 'Tomatoes',
+    'rainbow_chard': 'Rainbow chard',
     'artichoke': 'Artichoke',
-    'baked_goods': 'Baked goods',
-    'big_dishes': 'Serving dishes',
-    'bottles': 'Bottles',
-    'bread': 'Bread',
-    'burgers': 'Burgers',
-    'cakes': 'Cakes',
-    'cheese': 'Cheese',
-    'coffee': 'Coffee',
-    'confectionery': 'Confectionery',
-    'doughnuts': 'Doughnuts',
-    'drinks': 'Drinks',
-    'fish': 'Fish',
-    'flowers': 'Flowers',
     'fruit': 'Fruit',
     'giant_lemons': 'Giant lemons',
-    'hot_cross': 'Hot Cross',
-    'juices': 'Juices',
-    'lettuce': 'Lettuce',
-    'macarons': 'Macarons',
-    'market_architecture': 'Market architecture',
-    'market_scenes': 'Market scenes',
-    'meat': 'Meat',
-    'meringue': 'Meringue',
-    'mushroom_basket': 'Mushroom basket',
-    'mushrooms': 'Mushrooms',
-    'olives': 'Olives',
+    'strawberries': 'Strawberries',
     'oranges': 'Oranges',
-    'other_shard': 'Other shard shots',
+    'meat': 'Meat',
+    'fish': 'Fish',
     'oysters': 'Oysters',
-    'pasta': 'Pasta',
+    'bread': 'Bread',
+    'baked_goods': 'Baked goods',
+    'hot_cross': 'Hot Cross Buns',
+    'cakes': 'Cakes',
+    'doughnuts': 'Doughnuts',
+    'spices': 'Spices',
+    'cheese': 'Cheese',
+    'confectionery': 'Confectionery',
+    'flowers': 'Flowers and plants'
+}
+    
+
+food_categories = {
+   'takeaway_food': 'Takeaway food',
+   'restaurant_food': 'Restaurant food',
+   'scotch_egg': 'Scotch Egg',
+   'burgers': 'Burgers',
+   'pasta': 'Pasta',
+   'big_dishes': 'Serving dishes',
+   'coffee': 'Coffee',
+   'juices': 'Juices',
+   'drinks': 'Drinks'
+}
+
+
+people_categories = {
+    'market_scenes': 'Market scenes',
+    'us_at_the_market': 'Us at the market',
     'people_eating': 'People eating',
     'people_holding_produce': 'People holding produce',
-    'people': 'People',
-    'rainbow_chard': 'Rainbow chard',
-    'restaurant_food': 'Restaurant food',
-    'romanesco_cabbage': 'Romanesco cabbage',
-    'roof_and_shard': 'Roof and shard',
-    'scotch_egg': 'Scotch Egg',
-    'signage': 'Signage',
-    'spices': 'Spices',
-    'store_front': 'Store-front',
-    'strawberries': 'Strawberries',
+    'people': 'Other shots of people'
+}
+
+architecture_categories = {
+    'market_architecture': 'Market architecture',
     'street_art': 'Street Art',
-    'takeaway_food': 'Takeaway Food',
-    'tomatoes': 'Tomatoes',
-    'us_at_the_market': 'Us at the market',
-    'vegetables': 'Vegetables'
+    'roof_and_shard': 'Views of the Market Roof and the Shard',
+    'other_shard': 'Other shard shots',
+    'signage': 'Signage',
+    'store_front': 'Store-fronts'
 }
 
 style_categories = {
-    'cornucopia': 'Cornucopia',
-    'loads_of_the_same_thing': 'Loads of the same thing',
-    'in_rows': 'In rows',
+    'cornucopia': 'Cornucopias',
+    'loads_of_the_same_thing': 'Lots of one thing',
+    'in_rows': 'Things in rows',
     'shot_from_above': 'Shot from above',
     'food_in_hand': 'Food in hand',
     'ultra_close_ups': 'Ultra close-ups'
