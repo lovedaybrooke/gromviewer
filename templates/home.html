@@ -7,7 +7,7 @@
 	<div id='header'>
 		<h1>Photos of Borough Market</h1>
 		{% if categories %}
-			{% for url_name, display_name in categories.iteritems() %}
+			{% for url_name, display_name in categories.items() %}
 				<h3 class='category'><a href="/{{ url_name }}">{{ display_name }}</a></h3>
 			{% endfor %}
 		{% endif %}
