@@ -75,7 +75,7 @@ box-sizing: border-box;
   cursor:pointer;
   padding:10px;
   background: #2F8633;
-width: 180px;
+width: 220px;
 border-radius: 3px;
 padding: 8px 10px;
 color: #FFF;
@@ -89,7 +89,7 @@ cursor: pointer;
   transition:all 500ms ease;
 }
 #toggle + label:after {
-  content:"Select a category" 
+  content:"Select a different category" 
 }
 
 .container {
