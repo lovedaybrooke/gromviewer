@@ -67,6 +67,9 @@
 				 	<label for="confidenceScale">Change confidence level: <span id="confidenceFigure"></span>%</label>
 				 	<input type="range" min="1" max="100" value="{{confidence}}" class="slider" id="confidenceScale" name="confidence">
 				 	<input type="submit" value="Set new confidence level">
+				 	<div class="tooltip"><p>What does this mean?</p>
+					  <span class="tooltiptext">The image classifier provides a measure of how sure it is that the image fits in the category it has chosen. 100% means it is certain.</span>
+					</div>
 				 </form>
 			</div>
 		</div>
