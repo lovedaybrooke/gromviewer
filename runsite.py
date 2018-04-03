@@ -55,6 +55,15 @@ def home():
             style_categories=categories.style_categories
             )
 
+@app.route('/test')
+def test():
+    return render_template('test.html',
+            ingredient_categories=categories.ingredient_categories,
+            food_categories=categories.food_categories,
+            people_categories=categories.people_categories,
+            architecture_categories=categories.architecture_categories,
+            style_categories=categories.style_categories)
+
 @app.route('/<category>')
 def category(category):
     category_slug, category_name = legit_category(category)
@@ -64,7 +73,7 @@ def category(category):
         print ("\n\n\n")
         images = ImageCategorisations.query.filter(ImageCategorisations.tag == category_slug).filter(ImageCategorisations.strength > 0.2).order_by(ImageCategorisations.strength.desc()).all()
         urls = [image.url for image in images]
-        return render_template('home.html',
+        return render_template('category.html',
             urls=urls,
             category_name=category_name,
             ingredient_categories=categories.ingredient_categories,

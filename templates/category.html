@@ -7,11 +7,33 @@
 
 
 
+<input type="checkbox" name="toggle" id="toggle" />
+<label for="toggle"></label>
+
+
+
 <div class="container">
 
   
  <h1>Photos of Borough Market</h1>
- <div id='tags'>
+ 		{% if category_name %}
+			<h2>{{ category_name|title }}</h2>
+		{% endif %}
+ 	<div id="photos">
+
+		{% for url in urls %}
+			<div class="image">
+				<img src="{{ url }}" />
+			</div>
+		{% endfor %}
+	</div>
+
+</div>
+
+
+  
+<div class="message">
+	<div id='tags'>
 			<h2>Ingredients</h2>
 			{% for url_name, display_name in ingredient_categories.items() %}
 				<h3 class='category'><a href="/{{ url_name }}">{{ display_name }}</a></h3>
@@ -37,13 +59,6 @@
 				<h3 class='category'><a href="/{{ url_name }}">{{ display_name }}</a></h3>
 			{% endfor %}
 		</div>
-
-</div>
-
-
-  
-<div class="message">
-	
   
 
 
