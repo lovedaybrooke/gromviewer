@@ -16,9 +16,12 @@
 
   
  <h1>Photos of Borough Market</h1>
+ 	<div class="photo-title">
  		{% if category_name %}
 			<h2>{{ category_name|title }}</h2>
+			<h3>{{ count }} photos</h3>
 		{% endif %}
+	</div>
  	<div id="photos">
 
 		{% for url in urls %}

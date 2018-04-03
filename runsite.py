@@ -75,6 +75,7 @@ def category(category):
         urls = [image.url for image in images]
         return render_template('category.html',
             urls=urls,
+            count=len(urls),
             category_name=category_name,
             ingredient_categories=categories.ingredient_categories,
             food_categories=categories.food_categories,
