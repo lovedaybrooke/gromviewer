@@ -1,9 +1,13 @@
-from flask import Flask, render_template
+import logging
+
+from flask import Flask, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
 
+import categories
+
 app = Flask(__name__)
-heroku = Heroku(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/images_analysed'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -30,4 +34,15 @@ class ImageCategorisations(db.Model):
 
 @app.route('/')
 def home():
+    images = ImageCategorisations.query.filter(ImageCategorisations.hash == 'BesMz2uld3S').first()
     return render_template('home.html')
+
+@app.route('/<category>')
+def category(category):
+    if category in categories.subject_categories.keys():        
+        images = ImageCategorisations.query.filter(ImageCategorisations.tag == category).filter(ImageCategorisations.strength > 0.2).order_by(ImageCategorisations.strength.desc()).all()
+        urls = [image.url for image in images]
+        category_name = categories.subject_categories[category]
+        return render_template('home.html', urls=urls, category_name=category_name, categories=categories.subject_categories)
+    else:
+        return redirect("/", code=302)

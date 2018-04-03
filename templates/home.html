@@ -1,1 +1,23 @@
-<html><h1>Hello worlds</h1></html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+	<div id='header'>
+		<h1>Photos of Borough Market</h1>
+		{% if categories %}
+			{% for url_name, display_name in categories.iteritems() %}
+				<h3 class='category'><a href="/{{ url_name }}">{{ display_name }}</a></h3>
+			{% endfor %}
+		{% endif %}
+		{% if category_name %}
+			<h2>{{ category_name|title }}</h2>
+		{% endif %}
+	</div>
+		{% for url in urls %}
+			<img src="{{ url }}" style="width: 100px"/>
+		{% endfor %}
+	
+</body>
+</html>

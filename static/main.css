@@ -1,0 +1,31 @@
+body  {
+	font-family: 'Raleway', sans-serif;
+	color: #28353A;
+	text-align: center;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+}
+
+div#header {
+	
+}
+
+h1 {
+	font-size: 32px;
+	color: #939A9C;
+	width: 100%
+}
+
+h2 {
+	font-size: 24px;
+	width: 100%
+}
+
+h3.category {
+	display: inline-block;
+	background-color: #2F8633;
+	color: white;
+	padding: 8px 15px;
+	font-weight: 400;
+	font-size: 13px;
+}
