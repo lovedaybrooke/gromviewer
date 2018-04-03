@@ -58,9 +58,9 @@ architecture_categories = OrderedDict([
 
 style_categories = OrderedDict([
     ('cornucopia', 'Cornucopias'),
+    ('food_in_hand', 'Food in hand'),
     ('loads_of_the_same_thing', 'Lots of one thing'),
     ('in_rows', 'Things in rows'),
     ('shot_from_above', 'Shot from above'),
-    ('food_in_hand', 'Food in hand'),
     ('ultra_close_ups', 'Ultra close-ups')
 ])
