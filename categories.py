@@ -9,7 +9,6 @@ subject_categories = {
     'cheese': 'Cheese',
     'coffee': 'Coffee',
     'confectionery': 'Confectionery',
-    'cornucopia': 'Cornucopia',
     'doughnuts': 'Doughnuts',
     'drinks': 'Drinks',
     'fish': 'Fish',
@@ -51,6 +50,7 @@ subject_categories = {
 }
 
 style_categories = {
+    'cornucopia': 'Cornucopia',
     'loads_of_the_same_thing': 'Loads of the same thing',
     'in_rows': 'In rows',
     'shot_from_above': 'Shot from above',

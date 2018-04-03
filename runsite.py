@@ -34,8 +34,7 @@ class ImageCategorisations(db.Model):
 
 @app.route('/')
 def home():
-    images = ImageCategorisations.query.filter(ImageCategorisations.hash == 'BesMz2uld3S').first()
-    return render_template('home.html')
+    return render_template('home.html', categories=categories.subject_categories)
 
 @app.route('/<category>')
 def category(category):

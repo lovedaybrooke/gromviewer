@@ -4,6 +4,7 @@ body  {
 	text-align: center;
 	font-weight: 300;
 	letter-spacing: 0.1em;
+	padding: 20px;
 }
 
 div#header {
@@ -13,19 +14,33 @@ div#header {
 h1 {
 	font-size: 32px;
 	color: #939A9C;
-	width: 100%
 }
 
 h2 {
 	font-size: 24px;
-	width: 100%
 }
 
 h3.category {
 	display: inline-block;
 	background-color: #2F8633;
-	color: white;
 	padding: 8px 15px;
+	margin: 5px;
+}
+
+h3.category a {
+	color: white;
+	text-decoration: none;
 	font-weight: 400;
 	font-size: 13px;
+}
+
+div.image {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+}
+
+div.image img {
+	max-height: 180px;
+	max-width: 180px;
 }
