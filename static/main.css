@@ -215,3 +215,9 @@ div.slidecontainer input[type=submit] {
     visibility: visible;
     opacity: 1;
 }
+
+p.discrete-note {
+	padding: 5px 0px 0px 5px;
+	font-size: 12px;
+    font-weight: 400;
+}
