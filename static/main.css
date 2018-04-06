@@ -31,7 +31,7 @@ h2 {
 h3.category {
   display: inline-block;
   background-color: #2F8633;
-  padding: 8px 15px;
+  padding: 6px 15px;
   margin: 5px;
 border-radius: 3px;
 }
@@ -156,7 +156,7 @@ div.slidecontainer input[type=submit] {
 
   font-size: 12px;
   font-weight: 400;
-  padding: 8px 15px;
+  padding: 6px 15px;
   margin: 0px 15px 5px 15px;
   border-radius: 3px;
   vertical-align: middle;
@@ -217,7 +217,12 @@ div.slidecontainer input[type=submit] {
 }
 
 p.discrete-note {
-	padding: 5px 0px 0px 5px;
+	padding: 20px 0px 0px 5px;
 	font-size: 12px;
     font-weight: 400;
+}
+
+p.discrete-note span.bigger {
+	font-size: 16px;
+	line-height: 14px;
 }

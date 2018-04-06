@@ -68,6 +68,8 @@ def test():
 def category(category):
     category_slug, category_name = legit_category(category)
     if category_slug:
+        if category_name.find('#') > 0: 
+            category_name = category_name[:-2]
         confidence = request.args.get('confidence', default=50)
         images = ImageCategorisations.query.filter(
             ImageCategorisations.tag == category_slug).filter(

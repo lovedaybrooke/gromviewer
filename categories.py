@@ -29,6 +29,7 @@ ingredient_categories = OrderedDict([
 food_categories = OrderedDict([
     ('takeaway_food', 'Takeaway food'),
     ('restaurant_food', 'Restaurant food'),
+    ('cooking', u'Cooking #'),
     ('scotch_egg', 'Scotch Egg'),
     ('burgers', 'Burgers'),
     ('pasta', 'Pasta'),
@@ -59,8 +60,8 @@ architecture_categories = OrderedDict([
 style_categories = OrderedDict([
     ('cornucopia', 'Cornucopias'),
     ('food_in_hand', 'Food in hand'),
-    ('loads_of_the_same_thing', 'Lots of one thing'),
-    ('in_rows', 'Things in rows'),
-    ('shot_from_above', 'Shot from above'),
-    ('ultra_close_ups', 'Ultra close-ups')
+    ('loads_of_the_same_thing', u'Lots of one thing #'),
+    ('in_rows', u'Things in rows #'),
+    ('shot_from_above', u'Shot from above #'),
+    ('ultra_close_ups', u'Ultra close-ups #')
 ])
