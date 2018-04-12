@@ -5,6 +5,7 @@ from flask_heroku import Heroku
 import categories
 
 app = Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/images_analysed'
 heroku = Heroku(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
