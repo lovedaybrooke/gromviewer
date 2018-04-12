@@ -48,6 +48,7 @@ background:#F2F2F2;
 position: absolute;
 top: -520px;
 left: 0;
+min-width: 1280px;
 width: 100%;
 height: 520px;
 padding: 10px 20px;
@@ -127,7 +128,7 @@ div.image {
   display: inline-block;
   height: 180px;
   width: 180px;
-  margin: 20px;
+  margin: 10px;
 }
 
 div.image img {
