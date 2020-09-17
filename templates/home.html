@@ -11,6 +11,13 @@
 
   
  <h1>Photos of Borough Market</h1>
+ 
+<div id="intro">
+	 <p>This site shows the results of an analysis of Instagram photos taken of Borough Market across 4 weeks in spring 2018. It was done as part of my MSc in Digital Anthropology. The analysis is based on supervised learning, and used the Clarifai image recognition API.</p>
+	 <p>Choose a category below to see all images identified as belonging to that category. Adjust the confidence slider to change the level of confidence the model has that images belong to your selected category: for instance, setting an 80% confidence level will display only images that the image recognition model is 80% confident fit this category.</p>
+	 <p>You can see the code for <a href="https://github.com/lovedaybrooke/gromviewer">this site</a> and <a href="https://github.com/lovedaybrooke/gromcategoriser">the classifier</a>, or see <a href="https://prezi.com/view/iImizkWwIFrENrgu5A19/">the final outputs of the entire project</a>.</p>
+ </div>
+
  <div id='tags'>
 			<h2>Ingredients</h2>
 			{% for url_name, display_name in ingredient_categories.items() %}

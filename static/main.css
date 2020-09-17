@@ -21,7 +21,7 @@ h2 {
 #tags h2, #tags label {
   font-size:16px;
   color:#888;
-  padding:12px 5px 5px 5px;
+  padding: 18px 5px 0px 5px;
 }
 
 #tags h2:first-child {
@@ -41,6 +41,15 @@ h3.category a {
   text-decoration: none;
   font-weight: 700;
   font-size: 12px;
+}
+
+div#intro {
+  padding: 10px 0px 30px 0px;
+}
+
+div#intro p {
+  padding-bottom: 14px;
+  line-height: 1.5em;
 }
 
 .message {
